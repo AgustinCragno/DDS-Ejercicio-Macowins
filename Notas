@@ -1,0 +1,19 @@
+Notas Ejercicio Macowins:
+
+Interfaces: 
+Tanto para modelar las Formas de pago, asi como para los Estados de las prendas, hago uso de las interfaces
+con el objetivo de que las clases Venta y Prenda respectivamente no tengan que conocer el comportamiento de cada metodo
+de pago o descuentos relacionados con el estado de la prenda sino que simplemente utilicen sus metodos, ademas esto permite 
+crear nuevas formas de pago o estados de prenda de manera mas facil, sin tener que pensar en hacer cambios a las clases 
+Venta o Prenda.
+
+La clase Macowins es la que controla las ventas, a la que se le cargan una vez que se concretan, para despues poder calcular
+las ganancias de un dia en especifico en este listado de ventas.
+
+Agrego luego de ver las correcciones:
+
+Para el tipo de prenda pense representarlos con enums, pero como estos tipos no se utilizaban en ningun momento pense que
+seria medio redundante hacerlo, por eso es que los modele como Strings, pero si es verdad que al usar enums se logra
+normalizar los 3 valores y que nadie pueda poner un tipo nuevo de prenda.
+De todas formas lo corregire para que quede como sugirio.
+
