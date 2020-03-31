@@ -1,4 +1,4 @@
 public interface FormaDePago {
 
-    public int recargo(int monto);
+    public Double recargo(Double monto);
 }

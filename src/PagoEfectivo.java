@@ -1,6 +1,6 @@
 public class PagoEfectivo implements FormaDePago {
     @Override
-    public int recargo(int monto) {
-        return 0;
+    public Double recargo(Double monto) {
+        return 0.0;
     }
 }

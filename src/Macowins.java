@@ -1,3 +1,4 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,9 +13,9 @@ public class Macowins {
 
     public Macowins() { }
 
-    public int gananciasDelDia(int fecha){
-        List<Venta> ventasDelDia = ventas.stream().filter( venta -> venta.getFecha() == fecha ).collect(Collectors.toList());
+    public Double gananciasDelDia(LocalDateTime fecha){
+        List<Venta> ventasDelDia = ventas.stream().filter( venta -> venta.getFecha().isEqual(fecha) ).collect(Collectors.toList());
 
-        return ventas.stream().mapToInt(Venta::precioFinal).sum();
+        return ventasDelDia.stream().mapToDouble(Venta::precioFinal).sum();
     }
 }

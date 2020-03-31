@@ -1,13 +1,13 @@
 public class EstadoPromo implements EstadoDePrenda {
 
-    private int valorPromo;
+    private Double valorPromo;
 
-    public EstadoPromo(int valorPromo) {
+    public EstadoPromo(Double valorPromo) {
         this.valorPromo = valorPromo;
     }
 
     @Override
-    public int descuento(int precioInicial) {
+    public Double descuento(Double precioInicial) {
         return valorPromo;
     }
 }

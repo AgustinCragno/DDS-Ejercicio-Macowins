@@ -1,24 +1,24 @@
 public class Prenda {
 
-    private int precio;
-    private String tipo;
+    private Double precio;
+    private TipoDePrenda tipo;
     private EstadoDePrenda estado;
 
-    public Prenda(int precio, String tipo, EstadoDePrenda estado) {
+    public Prenda(Double precio, TipoDePrenda tipo, EstadoDePrenda estado) {
         this.precio = precio;
         this.tipo = tipo;
         this.estado = estado;
     }
 
-    public int precioDeVenta(){
+    public Double precioDeVenta(){
         return precio - estado.descuento(precio);
     }
 
-    public int getPrecio() {
+    public Double getPrecio() {
         return precio;
     }
 
-    public String getTipo() {
+    public TipoDePrenda getTipo() {
         return tipo;
     }
 

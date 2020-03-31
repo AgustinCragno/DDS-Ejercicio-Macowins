@@ -1,14 +1,14 @@
 public class PagoTarjeta implements FormaDePago{
 
-    private static final float COEFICIENTE_TARJETA = 0.1f;
-    private int cuotas;
+    private static final Double COEFICIENTE_TARJETA = 0.1;
+    private Double cuotas;
 
-    public PagoTarjeta(int cuotas) {
+    public PagoTarjeta(Double cuotas) {
         this.cuotas = cuotas;
     }
 
     @Override
-    public int recargo(int monto) {
-        return (int) (cuotas * (COEFICIENTE_TARJETA + monto * 0.01f));
+    public Double recargo(Double monto) {
+        return cuotas * (COEFICIENTE_TARJETA + monto * 0.01);
     }
 }

@@ -1,4 +1,4 @@
 public interface EstadoDePrenda {
 
-    public int descuento(int precioInicial);
+    public Double descuento(Double precioInicial);
 }
